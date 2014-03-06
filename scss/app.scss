@@ -1,0 +1,83 @@
+@import "settings";
+@import "foundation/components/grid";
+html,body{width:100%}
+html,body, .wrapper{overflow-x:hidden;}
+//Text
+.text-center{text-align:center;}
+.text-right{text-align:right;}
+@font-face {
+    font-family: bitter;
+    src: url(../fonts/bitter/Bitter-Regular.otf);
+}
+
+@font-face {
+    font-family: raleway;
+    src: url(../fonts/Raleway/Raleway-Regular.otf);
+}
+
+@font-face {
+    font-family: light;
+    src: url(../fonts/Raleway/Raleway-ExtraLight.otf);
+}
+
+h1,h2,h3,h4,h5{
+	font-family: bitter;
+	padding:15px;
+	margin:0px;
+}
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.17em; }
+h5 { font-size: .83em; }
+h6 { font-size: .75em; }
+
+p {font-family:raleway;line-height: 1.5em;letter-spacing: 1px;}
+span#label{font-family:light;font-style:italic;position:absolute;right:5px;top:0px;color:grey}
+
+//Custom Css
+header{
+
+}
+
+#left-menu{
+	width:200px;
+	height:100%;
+	background:#27aae1;
+	position:fixed;
+	z-index:999;
+	box-shadow: -4px 0 4px rgba(0, 0, 0, 0.5), 4px 0 4px rgba(0, 0, 0, 0.5);
+}
+
+#container{
+	overflow:hidden;
+	height:100%;
+	width:20000px;
+
+
+	section{
+	background:white;
+	float:left;
+	padding:15px;
+	overflow:auto;
+	display:block;
+	}
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: ".";    
+  display: block;    
+  height: 0;    
+  overflow: hidden; 
+}
+
+	
+//Page0
+.meWrap{width:200px;margin:0 auto;border-radius:50%;background:#27aae1;}
+.me{border-radius:50%;opacity:0.6;border: 4px dashed #FFF;}
+p.about{height:209px;display:table-cell;vertical-align:middle;}
+
+//Page1
+#page1 .large-12{padding-bottom:10px}
+
+
