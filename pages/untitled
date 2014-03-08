@@ -15,15 +15,16 @@
 		</div>
 
 		<div class="large-12 columns">
-			<div class="large-8 medium-8 columns text-right">
+
+			<div class="large-4 medium-4 columns">
+				<img src="img/work-ba.png">
+			</div>
+
+			<div class="large-8 medium-8 columns">
 				<h2>Bedazzle Arts</h2>
 				<p><strong>Summary:</strong> PSD to Wordpress Template conversion.</p>
 				<p><strong>Duration:</strong> 1 week</p>
 				<p><strong>Link:</strong> <a target="_blank" href="http://www.bedazzlearts.com/">Bedazzle Arts</a></p>
-			</div>
-
-			<div class="large-4 medium-4 columns">
-				<img src="img/work-ba.png">
 			</div>
 		</div>	
 
@@ -42,18 +43,21 @@
 		</div>
 
 		<div class="large-12 columns">
-			<div class="large-8 medium-8 columns text-right">
+
+			<div class="large-4 medium-4 columns">
+				<img src="img/work-sg.png">
+			</div>
+
+			<div class="large-8 medium-8 columns">
 				<h2>Sean Geragthy</h2>
 				<p><strong>Summary:</strong> I made this website responsive.</p>
 				<p><strong>Duration:</strong> 1 Day</p>
 				<p><strong>Link:</strong> <a target="_blank" href="http://seangeraghty.co.uk/">Sean Geragthy</a></p>				
-			</div>
-
-			<div class="large-4 medium-4 columns">
-				<img src="img/work-sg.png">
 			</div>
 		</div>
 
 	</div>
 
 </article>
+<script type="text/javascript">
+</script>

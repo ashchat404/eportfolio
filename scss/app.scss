@@ -1,5 +1,6 @@
 @import "settings";
-@import "foundation/components/grid";
+$progress-bar-height: rem-calc(30);
+@import "foundation/components/grid","foundation/components/progress-bars";
 html,body{width:100%}
 html,body, .wrapper{overflow-x:hidden;}
 //Text
@@ -31,7 +32,14 @@ h3 { font-size: 1.17em; }
 h5 { font-size: .83em; }
 h6 { font-size: .75em; }
 
-p {font-family:raleway;line-height: 1.5em;letter-spacing: 1px;}
+p {font-family:raleway;line-height: 1.5em;letter-spacing: 1px;padding:0 15px 0 15px}
+a{
+	color:#27aae1;text-decoration:none;
+	&:hover{
+		text-decoration:underline;
+	}
+
+}
 span#label{font-family:light;font-style:italic;position:absolute;right:5px;top:0px;color:grey}
 
 //Custom Css
@@ -71,11 +79,53 @@ header{
   overflow: hidden; 
 }
 
+.next{
+	position:fixed;
+	top:50%;
+	right:0px;
+	z-index:9999;
+
+	img{
+		opacity:0.2;
+		-webkit-transition: All 0.5s ease;
+		-moz-transition: All 0.5s ease;
+		-o-transition: All 0.5s ease;
+		-ms-transition: All 0.5s ease;
+		transition: All 0.5s ease;
+	}
+	&:hover img{
+		opacity:1;
+	}
+}
+
+.prev{
+	position:fixed;
+	top:50%;
+	left:0px;
+	z-index:9999;
+
+	img{
+		opacity:0.2;
+		transform:rotate(180deg);
+		-ms-transform:rotate(180deg); /* IE 9 */
+		-webkit-transform:rotate(180deg); /* Opera, Chrome, and Safari */
+		-webkit-transition: All 0.5s ease;
+		-moz-transition: All 0.5s ease;
+		-o-transition: All 0.5s ease;
+		-ms-transition: All 0.5s ease;
+		transition: All 0.5s ease;
+	}
+	&:hover img{
+		opacity:1;
+	}
+}
 	
 //Page0
 .meWrap{width:200px;margin:0 auto;border-radius:50%;background:#27aae1;}
 .me{border-radius:50%;opacity:0.6;border: 4px dashed #FFF;}
 p.about{height:209px;display:table-cell;vertical-align:middle;}
+
+
 
 //Page1
 #page1 .large-12{padding-bottom:10px}

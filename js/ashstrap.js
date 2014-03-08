@@ -1,7 +1,7 @@
 /*
 Author: Aishwarya Chaturvedi
 Website: talentedash.co.uk
-Version: 1
+Version: 1.1
 */
 
 var windowHeight = $(window).height();
@@ -47,13 +47,13 @@ for (i = 0;i<array.length;i++){
       }
       else{
 
+        $(this).removeClass("current").animate({
+          marginLeft:"-"+windowWidth
+        },{duration:300,queue:false});
+
         $(this).next().addClass("current").animate({
             marginLeft:"auto"
-        },{duration:500,queue:false});
-
-        $(this).removeClass("current").animate({
-          marginLeft:"-100%"
-        },{duration:500,queue:false});
+        },{queue:false});
       }
     });
 
@@ -65,11 +65,12 @@ for (i = 0;i<array.length;i++){
 
         $($(this)).removeClass("current").animate({  
           marginLeft:"auto"
-        },{duration:500,queue:false}); 
+        },{duration:800,queue:false});
+
 
         $($(this).prev()).addClass("current").animate({
           marginLeft:"0px"
-        },{duration:500,queue: false});
+        },{duration:300,queue: false}); 
       }
     });
 };
@@ -77,8 +78,27 @@ for (i = 0;i<array.length;i++){
 /*
 click function below
 */
+document.onkeydown = checkKey;
+  function checkKey(e){
+    e = e || window.event;
+      if (e.keyCode == '39'){
+        movenext();
+      }
+      if (e.keyCode == '37'){
+        moveprev();
+      }
+  }
 
-$(".next").click(function(){
+  $(".next").click(function(){
+    movenext();
+  });
+
+  
+  $(".prev").click(function(){
+    moveprev();
+  });
+
+ function movenext(){
     if(!$(pages).next().length){
       console.log("no more pages to right");
     }
@@ -92,9 +112,9 @@ $(".next").click(function(){
       },{duration:300,queue:false});
 
     }
-});
+  };
 
-$(".prev").click(function(){
+  function moveprev(){
     if(!$(pages).prev().length){
       console.log("no more pages to left");
     }
@@ -107,7 +127,5 @@ $(".prev").click(function(){
         $(".current").next().removeClass("current").animate({  
           marginLeft:"auto"
         },{duration:300,queue:false}); 
-    }
-});
-
-
+    } 
+  };
