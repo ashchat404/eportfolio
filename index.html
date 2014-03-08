@@ -15,8 +15,25 @@
     </style>
   </head>
   <body>
+
+<div class="off-canvas-wrap">
+  <div class="inner-wrap">
+
+    <!-- Off Canvas Menu -->
+    <aside class="left-off-canvas-menu">
+        <!-- whatever you want goes here -->
+        <ul class="off-canvas-list">
+          <li><a href="#" class="link" data-role="0">Home</a></li>
+          <li><a href="#" class="link" data-role="1">Websites</a></li>
+          <li><a href="#" class="link" data-role="2">Apps</a></li>
+          <li><a href="#" class="link" data-role="3">Personal Project</a></li>
+          <li><a href="#" class="link" data-role="4">Contact</a></li>
+        </ul>
+    </aside>
+    <a class="left-off-canvas-toggle menu-icon"><span></span></a>
     <a href="#" class="next"><img src="img/arrow.png"></a>
     <a href="#" class="prev"><img src="img/arrow.png"></a>
+
   <div class="row wrapper">
 
     <aside id="container" class="clearfix">
@@ -36,19 +53,25 @@
       <section id="4" data-role="page">
       </section>
 
-      <section id="5" data-role="page">
-      </section>
-
-      <section id="6" data-role="page">
-      </section>
-
     </aside>
 
   </div>
+
+  <!-- close the off-canvas menu -->
+  <a class="exit-off-canvas"></a>
+
+  </div>
+</div>
+
+
+
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.hammer-full.js"></script>
     <script src="bower_components/foundation/js/foundation.min.js"></script>
     <script type="text/javascript" src="js/ashstrap.js" ></script>
+    <script>
+      $(document).foundation();
+    </script>
   </body>
 </html>

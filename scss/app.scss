@@ -1,6 +1,6 @@
 @import "settings";
 $progress-bar-height: rem-calc(30);
-@import "foundation/components/grid","foundation/components/progress-bars";
+@import "foundation/components/grid","foundation/components/progress-bars","foundation/components/offcanvas";
 html,body{width:100%}
 html,body, .wrapper{overflow-x:hidden;}
 //Text
@@ -120,6 +120,10 @@ header{
 	}
 }
 	
+a.menu-icon {
+background:black;
+position:absolute;
+}
 //Page0
 .meWrap{width:200px;margin:0 auto;border-radius:50%;background:#27aae1;}
 .me{border-radius:50%;opacity:0.6;border: 4px dashed #FFF;}
