@@ -5,66 +5,44 @@
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
     <title>hammer</title>
     <link rel="stylesheet" href="stylesheets/app.css" />
+    <link rel="stylesheet" href="stylesheets/style.css" />
     <script src="bower_components/modernizr/modernizr.js"></script>
-    <style type="text/css">
-
-      article{
-        max-width:960px;
-        margin: 0 auto;
-        }
-    </style>
   </head>
   <body>
 
-<div class="off-canvas-wrap">
-  <div class="inner-wrap">
-
-    <!-- Off Canvas Menu -->
-    <aside class="left-off-canvas-menu">
-        <!-- whatever you want goes here -->
-        <ul class="off-canvas-list">
-          <li><a href="#" class="link" data-role="0">Home</a></li>
-          <li><a href="#" class="link" data-role="1">Websites</a></li>
-          <li><a href="#" class="link" data-role="2">Apps</a></li>
-          <li><a href="#" class="link" data-role="3">Personal Project</a></li>
-          <li><a href="#" class="link" data-role="4">Contact</a></li>
-        </ul>
-    </aside>
-    <a class="left-off-canvas-toggle menu-icon"><span></span></a>
+    <nav>
+      <a href="#" class="link active" data-role="0"><span class="icon-home"></span>Home</a>
+      <a href="#" class="link" data-role="1"><span class="icon-screen"></span>Website</a>
+      <a href="#" class="link" data-role="2"><span class="icon-tablet"></span>Apps</a>  
+      <a href="#" class="link" data-role="3"><span class="icon-food"></span>Food App</a>
+      <a href="#" class="link" data-role="4"><span class="icon-bubbles"></span>Contact</a>   
+    </nav>
+    
     <a href="#" class="next"><img src="img/arrow.png"></a>
     <a href="#" class="prev"><img src="img/arrow.png"></a>
 
-  <div class="row wrapper">
+    <div class="row wrapper">
 
-    <aside id="container" class="clearfix">
+      <aside id="container" class="clearfix">
 
-      <section id="0" data-role="page" class="current">
-      </section>
+        <section id="0" data-role="page" class="current">
+        </section>
 
-      <section id="1" data-role="page">
-      </section>
+        <section id="1" data-role="page">
+        </section>
 
-      <section id="2" data-role="page">
-      </section>
+        <section id="2" data-role="page">
+        </section>
 
-      <section id="3" data-role="page">
-      </section>
+        <section id="3" data-role="page">
+        </section>
 
-      <section id="4" data-role="page">
-      </section>
+        <section id="4" data-role="page">
+        </section>
 
-    </aside>
+      </aside>
 
-  </div>
-
-  <!-- close the off-canvas menu -->
-  <a class="exit-off-canvas"></a>
-
-  </div>
-</div>
-
-
-
+    </div>
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.hammer-full.js"></script>

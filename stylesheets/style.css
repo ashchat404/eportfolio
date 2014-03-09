@@ -1,0 +1,67 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?hkqg1o');
+	src:url('../fonts/icomoon.eot?#iefixhkqg1o') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?hkqg1o') format('woff'),
+		url('../fonts/icomoon.ttf?hkqg1o') format('truetype'),
+		url('../fonts/icomoon.svg?hkqg1o#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home:before {
+	content: "\e600";
+}
+.icon-screen:before {
+	content: "\e601";
+}
+.icon-tablet:before {
+	content: "\e602";
+}
+.icon-bubbles:before {
+	content: "\e603";
+}
+.icon-food:before {
+	content: "\e604";
+}
+.icon-cool:before {
+	content: "\e605";
+}
+.icon-happy:before {
+	content: "\e606";
+}
+.icon-grin:before {
+	content: "\e607";
+}
+.icon-wink:before {
+	content: "\e608";
+}
+.icon-tongue:before {
+	content: "\e609";
+}
+.icon-smiley:before {
+	content: "\e60a";
+}
+.icon-instagram:before {
+	content: "\e60b";
+}
+.icon-facebook:before {
+	content: "\e60c";
+}
+.icon-linkedin:before {
+	content: "\e60d";
+}

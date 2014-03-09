@@ -1470,60 +1470,6 @@ select {
     left: auto;
   }
 }
-/* Progress Bar */
-/* line 53, ../bower_components/foundation/scss/foundation/components/_progress-bars.scss */
-.progress {
-  background-color: #f6f6f6;
-  height: 1.875rem;
-  border: 1px solid white;
-  padding: 0.125rem;
-  margin-bottom: 0.625rem;
-}
-/* line 57, ../bower_components/foundation/scss/foundation/components/_progress-bars.scss */
-.progress .meter {
-  background: #008cba;
-  height: 100%;
-  display: block;
-}
-/* line 60, ../bower_components/foundation/scss/foundation/components/_progress-bars.scss */
-.progress.secondary .meter {
-  background: #e7e7e7;
-  height: 100%;
-  display: block;
-}
-/* line 61, ../bower_components/foundation/scss/foundation/components/_progress-bars.scss */
-.progress.success .meter {
-  background: #43ac6a;
-  height: 100%;
-  display: block;
-}
-/* line 62, ../bower_components/foundation/scss/foundation/components/_progress-bars.scss */
-.progress.alert .meter {
-  background: #f04124;
-  height: 100%;
-  display: block;
-}
-/* line 64, ../bower_components/foundation/scss/foundation/components/_progress-bars.scss */
-.progress.radius {
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-}
-/* line 65, ../bower_components/foundation/scss/foundation/components/_progress-bars.scss */
-.progress.radius .meter {
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-}
-/* line 68, ../bower_components/foundation/scss/foundation/components/_progress-bars.scss */
-.progress.round {
-  -webkit-border-radius: 1000px;
-  border-radius: 1000px;
-}
-/* line 69, ../bower_components/foundation/scss/foundation/components/_progress-bars.scss */
-.progress.round .meter {
-  -webkit-border-radius: 999px;
-  border-radius: 999px;
-}
-
 /* line 110, ../bower_components/foundation/scss/foundation/components/_type.scss */
 .text-left {
   text-align: left !important;
@@ -3089,71 +3035,35 @@ html, body, .wrapper {
 }
 
 @font-face {
-  font-family: bitter;
-  src: url(../fonts/bitter/Bitter-Regular.otf);
+  font-family: Lane;
+  src: url(../fonts/Lane/LANENAR_.ttf);
 }
 
-@font-face {
-  font-family: raleway;
-  src: url(../fonts/Raleway/Raleway-Regular.otf);
-}
-
-@font-face {
-  font-family: light;
-  src: url(../fonts/Raleway/Raleway-ExtraLight.otf);
-}
-
-/* line 24, ../scss/app.scss */
+/* line 16, ../scss/app.scss */
 h1, h2, h3, h4, h5 {
-  font-family: bitter;
+  font-family: Lane;
   padding: 15px;
   margin: 0px;
 }
 
-/* line 29, ../scss/app.scss */
-h1 {
-  font-size: 2em;
-}
-
-/* line 30, ../scss/app.scss */
-h2 {
-  font-size: 1.5em;
-}
-
-/* line 31, ../scss/app.scss */
-h3 {
-  font-size: 1.17em;
-}
-
-/* line 32, ../scss/app.scss */
-h5 {
-  font-size: .83em;
-}
-
-/* line 33, ../scss/app.scss */
-h6 {
-  font-size: .75em;
-}
-
-/* line 35, ../scss/app.scss */
+/* line 23, ../scss/app.scss */
 p {
-  font-family: raleway;
   line-height: 1.5em;
   letter-spacing: 1px;
   padding: 0 15px 0 15px;
 }
 
-/* line 36, ../scss/app.scss */
+/* line 24, ../scss/app.scss */
 a {
   color: #27aae1;
   text-decoration: none;
 }
-/* line 38, ../scss/app.scss */
+/* line 26, ../scss/app.scss */
 a:hover {
   text-decoration: underline;
 }
 
-/* line 43, ../scss/app.scss */
+/* line 31, ../scss/app.scss */
 span#label {
   font-family: light;
   font-style: italic;
@@ -3163,7 +3073,36 @@ span#label {
   color: grey;
 }
 
-/* line 50, ../scss/app.scss */
+/* line 38, ../scss/app.scss */
+nav {
+  max-width: 750px;
+  width: 100%;
+  margin: 10px auto 0 auto;
+  font-size: 28px;
+}
+/* line 43, ../scss/app.scss */
+nav a {
+  color: black;
+  padding: 0 15px 0 0;
+}
+/* line 44, ../scss/app.scss */
+nav span {
+  padding-right: 5px;
+}
+
+/* line 46, ../scss/app.scss */
+.active {
+  color: #0078A0;
+  text-decoration: underline;
+}
+
+/* line 47, ../scss/app.scss */
+article {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* line 52, ../scss/app.scss */
 #left-menu {
   width: 200px;
   height: 100%;
@@ -3173,13 +3112,13 @@ span#label {
   box-shadow: -4px 0 4px rgba(0, 0, 0, 0.5), 4px 0 4px rgba(0, 0, 0, 0.5);
 }
 
-/* line 59, ../scss/app.scss */
+/* line 61, ../scss/app.scss */
 #container {
   overflow: hidden;
   height: 100%;
   width: 20000px;
 }
-/* line 65, ../scss/app.scss */
+/* line 67, ../scss/app.scss */
 #container section {
   background: white;
   float: left;
@@ -3188,7 +3127,7 @@ span#label {
   display: block;
 }
 
-/* line 75, ../scss/app.scss */
+/* line 77, ../scss/app.scss */
 .clearfix:before,
 .clearfix:after {
   content: ".";
@@ -3197,14 +3136,14 @@ span#label {
   overflow: hidden;
 }
 
-/* line 82, ../scss/app.scss */
+/* line 84, ../scss/app.scss */
 .next {
   position: fixed;
   top: 50%;
   right: 0px;
   z-index: 9999;
 }
-/* line 88, ../scss/app.scss */
+/* line 90, ../scss/app.scss */
 .next img {
   opacity: 0.2;
   -webkit-transition: All 0.5s ease;
@@ -3213,19 +3152,19 @@ span#label {
   -ms-transition: All 0.5s ease;
   transition: All 0.5s ease;
 }
-/* line 96, ../scss/app.scss */
+/* line 98, ../scss/app.scss */
 .next:hover img {
   opacity: 1;
 }
 
-/* line 101, ../scss/app.scss */
+/* line 103, ../scss/app.scss */
 .prev {
   position: fixed;
   top: 50%;
   left: 0px;
   z-index: 9999;
 }
-/* line 107, ../scss/app.scss */
+/* line 109, ../scss/app.scss */
 .prev img {
   opacity: 0.2;
   transform: rotate(180deg);
@@ -3239,18 +3178,58 @@ span#label {
   -ms-transition: All 0.5s ease;
   transition: All 0.5s ease;
 }
-/* line 118, ../scss/app.scss */
+/* line 120, ../scss/app.scss */
 .prev:hover img {
   opacity: 1;
 }
 
-/* line 123, ../scss/app.scss */
+/* line 125, ../scss/app.scss */
 a.menu-icon {
   background: black;
   position: absolute;
 }
 
-/* line 128, ../scss/app.scss */
+/* line 132, ../scss/app.scss */
+form input {
+  width: 100%;
+  height: 50px;
+  font-size: 22px;
+  padding: 15px;
+  border: 5px solid #D3D3D3;
+}
+/* line 139, ../scss/app.scss */
+form textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 15px;
+  margin: 10px 0 0 0;
+  min-height: 300px;
+  font-size: 22px;
+  border: 5px solid #D3D3D3;
+}
+/* line 148, ../scss/app.scss */
+form button {
+  width: 100px;
+  height: 50px;
+  border: 5px solid lightgrey;
+  text-align: center;
+  font-size: 22px;
+  margin: 10px 0 0 15px;
+  background: #27AAE1;
+  color: #FFF;
+  cursor: pointer;
+}
+/* line 159, ../scss/app.scss */
+form button:hover {
+  opacity: 0.9;
+  -webkit-transition: All 0.5s ease;
+  -moz-transition: All 0.5s ease;
+  -o-transition: All 0.5s ease;
+  -ms-transition: All 0.5s ease;
+  transition: All 0.5s ease;
+}
+
+/* line 171, ../scss/app.scss */
 .meWrap {
   width: 200px;
   margin: 0 auto;
@@ -3258,21 +3237,26 @@ a.menu-icon {
   background: #27aae1;
 }
 
-/* line 129, ../scss/app.scss */
+/* line 172, ../scss/app.scss */
 .me {
   border-radius: 50%;
   opacity: 0.6;
   border: 4px dashed #FFF;
 }
 
-/* line 130, ../scss/app.scss */
+/* line 173, ../scss/app.scss */
 p.about {
   height: 209px;
   display: table-cell;
   vertical-align: middle;
 }
 
-/* line 135, ../scss/app.scss */
+/* line 178, ../scss/app.scss */
 #page1 .large-12 {
   padding-bottom: 10px;
+}
+
+/* line 181, ../scss/app.scss */
+#page3 h2 {
+  padding: 0px;
 }

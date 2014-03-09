@@ -1,7 +1,7 @@
 /*
 Author: Aishwarya Chaturvedi
 Website: talentedash.co.uk
-Version: 1.1
+Version: 1.2
 */
 
 var windowHeight = $(window).height();
@@ -40,20 +40,12 @@ $("#container").on("dragright dragleft",function(e){
 
 for (i = 0;i<array.length;i++){
     $("#container #"+i).load("pages/page"+i+".html");
-    
     Hammer(array[i]).on("swipeleft", function(ev) {
       if(!$(this).next().length){
         console.log("no more pages to right");
       }
       else{
-
-        $(this).removeClass("current").animate({
-          marginLeft:"-"+windowWidth
-        },{duration:300,queue:false});
-
-        $(this).next().addClass("current").animate({
-            marginLeft:"auto"
-        },{queue:false});
+        movenext();
       }
     });
 
@@ -62,15 +54,7 @@ for (i = 0;i<array.length;i++){
         console.log("no more pages to left");
       }
       else{
-
-        $($(this)).removeClass("current").animate({  
-          marginLeft:"auto"
-        },{duration:800,queue:false});
-
-
-        $($(this).prev()).addClass("current").animate({
-          marginLeft:"0px"
-        },{duration:300,queue: false}); 
+        moveprev();
       }
     });
 };
@@ -100,10 +84,13 @@ $(".prev").click(function(){
 });
 
 function movenext(){
-  if(!$(pages).next().length){
+  if(!$(".current").next().length){
     console.log("no more pages to right");
   }
   else{
+    var id = $(".current").next().attr("id");
+    $(".link").removeClass("active");
+    $(".link[data-role="+id+"]").addClass("active");
     $(cur).next().addClass("current").animate({
         marginLeft:"auto"
     },{duration:300,queue:false});
@@ -116,10 +103,13 @@ function movenext(){
 };
 
 function moveprev(){
-  if(!$(pages).prev().length){
+  if(!$(".current").prev().length){
     console.log("no more pages to left");
   }
   else{
+      var id = $(".current").prev().attr("id");
+      $(".link").removeClass("active");
+      $(".link[data-role="+id+"]").addClass("active");
 
       $(cur).prev().addClass("current").animate({
         marginLeft:"0px"
@@ -135,13 +125,20 @@ function moveprev(){
 /*
 Menu system
 */
+ console.log(windowWidth);
 $(".link").click(function(){
     for (z = 0; z<array.length; z++){
       if ($(this).attr("data-role") == array[z].id){
         var t = $(this).attr("data-role");
-        $("section#"+t).prevAll().removeClass("current").css("marginLeft","-"+windowWidth+"px");
+        $(".link").removeClass("active");
+        $(this).addClass("active");
+        $("section#"+t).prevAll().removeClass("current").animate({
+            marginLeft:"-"+windowWidth+"px"
+          },{duration:300,queue:false});
         $("section#"+t).nextAll().removeClass("current").css("marginLeft","auto");
-        $("section#"+t).addClass("current").css("marginLeft","0px");
+        $("section#"+t).addClass("current").animate({
+          marginLeft: "0px"
+        },{duration:300,queue:false});
       }
     }
 });
