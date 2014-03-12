@@ -27,9 +27,7 @@ $(window).resize(function() {
   $("#container section").css("width",windowWidth);
   $("#container section").css("height",windowHeight);
   $("#container").css("height",windowHeight);
-    $(".current").prev().removeClass("current").animate({
-      marginLeft:"-" + windowWidth + "px"
-    },{duration:300,queue:false});
+  $(".current").prevAll().removeClass("current").css("marginLeft","-"+windowWidth+"px");
 });
 
 /*
