@@ -4,7 +4,7 @@ Website: talentedash.co.uk
 Version: 1.2
 */
 
-var windowHeight = $(window).height();
+var windowHeight = $(window).height()-50;
 var windowWidth = $(window).width();
 var array = [];
 var pages = $("#container section");
@@ -22,11 +22,14 @@ $("#container section").css("width",windowWidth);
 
 $(window).resize(function() {
   windowWidth = $(window).width();
-  windowHeight = $(window).height();
+  windowHeight = $(window).height()-50;
   console.log(windowWidth);
   $("#container section").css("width",windowWidth);
   $("#container section").css("height",windowHeight);
   $("#container").css("height",windowHeight);
+    $(".current").prev().removeClass("current").animate({
+      marginLeft:"-" + windowWidth + "px"
+    },{duration:300,queue:false});
 });
 
 /*
@@ -142,4 +145,3 @@ $(".link").click(function(){
       }
     }
 });
-

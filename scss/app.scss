@@ -3,6 +3,17 @@ $progress-bar-height: rem-calc(30);
 @import "foundation/components/grid","foundation/components/offcanvas";
 html,body{width:100%}
 html,body, .wrapper{overflow-x:hidden;}
+
+
+@media only screen and (max-width: 50em) { 
+	nav{
+		width:280px!important;
+	}
+	.tog{
+		display:none!important;
+	}
+} 
+
 //Text
 .text-center{text-align:center;}
 .text-right{text-align:right;}
@@ -36,11 +47,15 @@ header{
 }
 
 nav{
-	max-width:750px;
+	max-width:760px;
 	width:100%;
 	margin: 10px auto 0 auto;
 	font-size:28px;
-	a{color:black;padding:0 15px 0 0}
+	height:40px;
+	a{
+		color:black;padding:0 15px 0 0;
+	}
+	.tog{padding:0px!important;display:inline;font-size:inherit;}
 	span{padding-right:5px;}
 }
 .active{color:#0078A0;text-decoration:underline}
@@ -175,7 +190,7 @@ p.about{height:209px;display:table-cell;vertical-align:middle;}
 
 
 //Page1
-#page1 .large-12{padding-bottom:10px}
+#page1 .large-12{padding-bottom:10px;}
 
 //Page3
 #page3 h2{padding:0px}
