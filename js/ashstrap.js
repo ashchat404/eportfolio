@@ -23,7 +23,6 @@ $("#container section").css("width",windowWidth);
 $(window).resize(function() {
   windowWidth = $(window).width();
   windowHeight = $(window).height()-50;
-  console.log(windowWidth);
   $("#container section").css("width",windowWidth);
   $("#container section").css("height",windowHeight);
   $("#container").css("height",windowHeight);
@@ -42,21 +41,11 @@ $("#container").on("dragright dragleft",function(e){
 for (i = 0;i<array.length;i++){
     $("#container #"+i).load("pages/page"+i+".html");
     Hammer(array[i]).on("swipeleft", function(ev) {
-      if(!$(this).next().length){
-        console.log("no more pages to right");
-      }
-      else{
-        movenext();
-      }
+      movenext();
     });
 
     Hammer(array[i]).on("swiperight", function(ev) {
-      if(!$(this).prev().length){
-        console.log("no more pages to left");
-      }
-      else{
-        moveprev();
-      }
+      moveprev();
     });
 };
 
@@ -126,7 +115,6 @@ function moveprev(){
 /*
 Menu system
 */
- console.log(windowWidth);
 $(".link").click(function(){
     for (z = 0; z<array.length; z++){
       if ($(this).attr("data-role") == array[z].id){

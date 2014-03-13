@@ -1,6 +1,6 @@
 @import "settings";
 $progress-bar-height: rem-calc(30);
-@import "foundation/components/grid","foundation/components/offcanvas";
+@import "foundation/components/grid","foundation/components/offcanvas","foundation/components/visibility";
 html,body{width:100%}
 html,body, .wrapper{overflow-x:hidden;}
 
@@ -12,12 +12,14 @@ html,body, .wrapper{overflow-x:hidden;}
 	.tog{
 		display:none!important;
 	}
+	.next, .prev{display:none!important}
 } 
 
 //Text
 .text-center{text-align:center;}
 .text-right{text-align:right;}
-
+i.show-for-large-up,.show-for-medium-only{position:absolute;top:2px;left:2px;font-size:10px}
+i.show-for-small-only{font-size:10px;padding-bottom:5px}
 
 @font-face {
     font-family: Lane;
@@ -101,6 +103,7 @@ article{
 	top:50%;
 	right:0px;
 	z-index:9999;
+	display:block;
 
 	img{
 		opacity:0.2;
@@ -120,6 +123,7 @@ article{
 	top:50%;
 	left:0px;
 	z-index:9999;
+	display:block;
 
 	img{
 		opacity:0.2;
