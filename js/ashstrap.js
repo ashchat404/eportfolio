@@ -4,8 +4,11 @@ Website: talentedash.co.uk
 Version: 1.2
 */
 
-var windowHeight = $(window).height()-50;
+var windowHeight = $(window).height();
 var windowWidth = $(window).width();
+if (windowWidth <= 760){
+   windowHeight = $(window).height()-60;
+}
 var array = [];
 var pages = $("#container section");
 var cur = document.getElementsByClassName('current');
@@ -22,7 +25,10 @@ $("#container section").css("width",windowWidth);
 
 $(window).resize(function() {
   windowWidth = $(window).width();
-  windowHeight = $(window).height()-50;
+  windowHeight = $(window).height();
+  if (windowWidth <= 760){
+     windowHeight = $(window).height()-60;
+  }
   $("#container section").css("width",windowWidth);
   $("#container section").css("height",windowHeight);
   $("#container").css("height",windowHeight);
@@ -56,10 +62,10 @@ document.onkeydown = checkKey;
 
 function checkKey(e){
   e = e || window.event;
-    if (e.keyCode == '39'){
+    if (e.keyCode == '39' || e.keyCode == '40'){
       movenext();
     }
-    if (e.keyCode == '37'){
+    if (e.keyCode == '37' || e.keyCode == '38'){
       moveprev();
     }
 }

@@ -1,24 +1,15 @@
 @import "settings";
 $progress-bar-height: rem-calc(30);
-@import "foundation/components/grid","foundation/components/offcanvas","foundation/components/visibility";
+$tooltip-bg: #27aae1;
+$has-tip-border-bottom: none;
+@import "foundation/components/grid","foundation/components/offcanvas","foundation/components/visibility", "foundation/components/tooltips";
 html,body{width:100%}
 html,body, .wrapper{overflow-x:hidden;}
-
-
-@media only screen and (max-width: 50em) { 
-	nav{
-		width:280px!important;
-	}
-	.tog{
-		display:none!important;
-	}
-	.next, .prev{display:none!important}
-} 
 
 //Text
 .text-center{text-align:center;}
 .text-right{text-align:right;}
-i.show-for-large-up,.show-for-medium-only{position:absolute;top:2px;left:2px;font-size:10px}
+i.show-for-large-up,.show-for-medium-only{position:absolute;top:2px;right:2px;font-size:10px}
 i.show-for-small-only{font-size:10px;padding-bottom:5px}
 
 @font-face {
@@ -49,11 +40,15 @@ header{
 }
 
 nav{
-	max-width:760px;
-	width:100%;
-	margin: 10px auto 0 auto;
-	font-size:28px;
-	height:40px;
+	width:40px;
+	font-size:30px;
+	height:100%;
+	position:absolute;
+	left:0px;
+	padding:10px 0 0 10px;
+	z-index:9999;
+	background:white;
+	span{color:grey;}
 	a{
 		color:black;padding:0 15px 0 0;
 	}
@@ -198,4 +193,20 @@ p.about{height:209px;display:table-cell;vertical-align:middle;}
 
 //Page3
 #page3 h2{padding:0px}
+
+@media only screen and (max-width: 960px) { 
+	nav{
+		width:280px;
+		font-size:28px;
+		height:50px;
+		padding-left:0px;
+		position:relative;
+		margin:0 auto;
+	}
+	.tog{
+		display:none;
+	}
+	.next, .prev{display:none}
+} 
+
 

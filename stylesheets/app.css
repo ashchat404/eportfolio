@@ -3594,51 +3594,140 @@ th.hide-for-touch {
   display: table-cell !important;
 }
 
-/* line 4, ../scss/app.scss */
+/* Tooltips */
+/* line 33, ../bower_components/foundation/scss/foundation/components/_tooltips.scss */
+.has-tip {
+  border-bottom: none;
+  cursor: help;
+  font-weight: bold;
+  color: #333333;
+}
+/* line 40, ../bower_components/foundation/scss/foundation/components/_tooltips.scss */
+.has-tip:hover, .has-tip:focus {
+  border-bottom: dotted 1px #003f54;
+  color: #008cba;
+}
+/* line 46, ../bower_components/foundation/scss/foundation/components/_tooltips.scss */
+.has-tip.tip-left, .has-tip.tip-right {
+  float: none !important;
+}
+
+/* line 49, ../bower_components/foundation/scss/foundation/components/_tooltips.scss */
+.tooltip {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  font-weight: normal;
+  font-size: 0.875rem;
+  line-height: 1.3;
+  padding: 0.75rem;
+  max-width: 85%;
+  left: 50%;
+  width: 100%;
+  color: white;
+  background: #27aae1;
+}
+/* line 63, ../bower_components/foundation/scss/foundation/components/_tooltips.scss */
+.tooltip > .nub {
+  display: block;
+  left: 5px;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: solid 5px;
+  border-color: transparent transparent #27aae1 transparent;
+  top: -10px;
+}
+/* line 74, ../bower_components/foundation/scss/foundation/components/_tooltips.scss */
+.tooltip.radius {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 77, ../bower_components/foundation/scss/foundation/components/_tooltips.scss */
+.tooltip.round {
+  -webkit-border-radius: 1000px;
+  border-radius: 1000px;
+}
+/* line 79, ../bower_components/foundation/scss/foundation/components/_tooltips.scss */
+.tooltip.round > .nub {
+  left: 2rem;
+}
+/* line 84, ../bower_components/foundation/scss/foundation/components/_tooltips.scss */
+.tooltip.opened {
+  color: #008cba !important;
+  border-bottom: dotted 1px #003f54 !important;
+}
+
+/* line 90, ../bower_components/foundation/scss/foundation/components/_tooltips.scss */
+.tap-to-close {
+  display: block;
+  font-size: 0.625rem;
+  color: #777777;
+  font-weight: normal;
+}
+
+@media only screen and (min-width: 40.063em) {
+  /* line 99, ../bower_components/foundation/scss/foundation/components/_tooltips.scss */
+  .tooltip > .nub {
+    border-color: transparent transparent #27aae1 transparent;
+    top: -10px;
+  }
+  /* line 103, ../bower_components/foundation/scss/foundation/components/_tooltips.scss */
+  .tooltip.tip-top > .nub {
+    border-color: #27aae1 transparent transparent transparent;
+    top: auto;
+    bottom: -10px;
+  }
+  /* line 110, ../bower_components/foundation/scss/foundation/components/_tooltips.scss */
+  .tooltip.tip-left, .tooltip.tip-right {
+    float: none !important;
+  }
+  /* line 112, ../bower_components/foundation/scss/foundation/components/_tooltips.scss */
+  .tooltip.tip-left > .nub {
+    border-color: transparent transparent transparent #27aae1;
+    right: -10px;
+    left: auto;
+    top: 50%;
+    margin-top: -5px;
+  }
+  /* line 119, ../bower_components/foundation/scss/foundation/components/_tooltips.scss */
+  .tooltip.tip-right > .nub {
+    border-color: transparent #27aae1 transparent transparent;
+    right: auto;
+    left: -10px;
+    top: 50%;
+    margin-top: -5px;
+  }
+}
+/* line 6, ../scss/app.scss */
 html, body {
   width: 100%;
 }
 
-/* line 5, ../scss/app.scss */
+/* line 7, ../scss/app.scss */
 html, body, .wrapper {
   overflow-x: hidden;
 }
 
-@media only screen and (max-width: 50em) {
-  /* line 9, ../scss/app.scss */
-  nav {
-    width: 280px !important;
-  }
-
-  /* line 12, ../scss/app.scss */
-  .tog {
-    display: none !important;
-  }
-
-  /* line 15, ../scss/app.scss */
-  .next, .prev {
-    display: none !important;
-  }
-}
-/* line 19, ../scss/app.scss */
+/* line 10, ../scss/app.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 20, ../scss/app.scss */
+/* line 11, ../scss/app.scss */
 .text-right {
   text-align: right;
 }
 
-/* line 21, ../scss/app.scss */
+/* line 12, ../scss/app.scss */
 i.show-for-large-up, .show-for-medium-only {
   position: absolute;
   top: 2px;
-  left: 2px;
+  right: 2px;
   font-size: 10px;
 }
 
-/* line 22, ../scss/app.scss */
+/* line 13, ../scss/app.scss */
 i.show-for-small-only {
   font-size: 10px;
   padding-bottom: 5px;
@@ -3649,31 +3738,31 @@ i.show-for-small-only {
   src: url(../fonts/Lane/LANENAR_.ttf);
 }
 
-/* line 29, ../scss/app.scss */
+/* line 20, ../scss/app.scss */
 h1, h2, h3, h4, h5 {
   font-family: Lane;
   padding: 15px;
   margin: 0px;
 }
 
-/* line 36, ../scss/app.scss */
+/* line 27, ../scss/app.scss */
 p {
   line-height: 1.5em;
   letter-spacing: 1px;
   padding: 0 15px 0 15px;
 }
 
-/* line 37, ../scss/app.scss */
+/* line 28, ../scss/app.scss */
 a {
   color: #27aae1;
   text-decoration: none;
 }
-/* line 39, ../scss/app.scss */
+/* line 30, ../scss/app.scss */
 a:hover {
   text-decoration: underline;
 }
 
-/* line 44, ../scss/app.scss */
+/* line 35, ../scss/app.scss */
 span#label {
   font-family: light;
   font-style: italic;
@@ -3683,43 +3772,50 @@ span#label {
   color: grey;
 }
 
-/* line 51, ../scss/app.scss */
+/* line 42, ../scss/app.scss */
 nav {
-  max-width: 760px;
-  width: 100%;
-  margin: 10px auto 0 auto;
-  font-size: 28px;
-  height: 40px;
+  width: 40px;
+  font-size: 30px;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  padding: 10px 0 0 10px;
+  z-index: 9999;
+  background: white;
 }
-/* line 57, ../scss/app.scss */
+/* line 51, ../scss/app.scss */
+nav span {
+  color: grey;
+}
+/* line 52, ../scss/app.scss */
 nav a {
   color: black;
   padding: 0 15px 0 0;
 }
-/* line 60, ../scss/app.scss */
+/* line 55, ../scss/app.scss */
 nav .tog {
   padding: 0px !important;
   display: inline;
   font-size: inherit;
 }
-/* line 61, ../scss/app.scss */
+/* line 56, ../scss/app.scss */
 nav span {
   padding-right: 5px;
 }
 
-/* line 63, ../scss/app.scss */
+/* line 58, ../scss/app.scss */
 .active {
   color: #0078A0;
   text-decoration: underline;
 }
 
-/* line 64, ../scss/app.scss */
+/* line 59, ../scss/app.scss */
 article {
   max-width: 960px;
   margin: 0 auto;
 }
 
-/* line 69, ../scss/app.scss */
+/* line 64, ../scss/app.scss */
 #left-menu {
   width: 200px;
   height: 100%;
@@ -3729,13 +3825,13 @@ article {
   box-shadow: -4px 0 4px rgba(0, 0, 0, 0.5), 4px 0 4px rgba(0, 0, 0, 0.5);
 }
 
-/* line 78, ../scss/app.scss */
+/* line 73, ../scss/app.scss */
 #container {
   overflow: hidden;
   height: 100%;
   width: 20000px;
 }
-/* line 84, ../scss/app.scss */
+/* line 79, ../scss/app.scss */
 #container section {
   background: white;
   float: left;
@@ -3744,7 +3840,7 @@ article {
   display: block;
 }
 
-/* line 94, ../scss/app.scss */
+/* line 89, ../scss/app.scss */
 .clearfix:before,
 .clearfix:after {
   content: ".";
@@ -3753,7 +3849,7 @@ article {
   overflow: hidden;
 }
 
-/* line 101, ../scss/app.scss */
+/* line 96, ../scss/app.scss */
 .next {
   position: fixed;
   top: 50%;
@@ -3761,7 +3857,7 @@ article {
   z-index: 9999;
   display: block;
 }
-/* line 108, ../scss/app.scss */
+/* line 103, ../scss/app.scss */
 .next img {
   opacity: 0.2;
   -webkit-transition: All 0.5s ease;
@@ -3770,12 +3866,12 @@ article {
   -ms-transition: All 0.5s ease;
   transition: All 0.5s ease;
 }
-/* line 116, ../scss/app.scss */
+/* line 111, ../scss/app.scss */
 .next:hover img {
   opacity: 1;
 }
 
-/* line 121, ../scss/app.scss */
+/* line 116, ../scss/app.scss */
 .prev {
   position: fixed;
   top: 50%;
@@ -3783,7 +3879,7 @@ article {
   z-index: 9999;
   display: block;
 }
-/* line 128, ../scss/app.scss */
+/* line 123, ../scss/app.scss */
 .prev img {
   opacity: 0.2;
   transform: rotate(180deg);
@@ -3797,18 +3893,18 @@ article {
   -ms-transition: All 0.5s ease;
   transition: All 0.5s ease;
 }
-/* line 139, ../scss/app.scss */
+/* line 134, ../scss/app.scss */
 .prev:hover img {
   opacity: 1;
 }
 
-/* line 144, ../scss/app.scss */
+/* line 139, ../scss/app.scss */
 a.menu-icon {
   background: black;
   position: absolute;
 }
 
-/* line 151, ../scss/app.scss */
+/* line 146, ../scss/app.scss */
 form input {
   width: 100%;
   height: 50px;
@@ -3816,7 +3912,7 @@ form input {
   padding: 15px;
   border: 5px solid #D3D3D3;
 }
-/* line 158, ../scss/app.scss */
+/* line 153, ../scss/app.scss */
 form textarea {
   width: 100%;
   max-width: 100%;
@@ -3826,7 +3922,7 @@ form textarea {
   font-size: 22px;
   border: 5px solid #D3D3D3;
 }
-/* line 167, ../scss/app.scss */
+/* line 162, ../scss/app.scss */
 form button {
   width: 100px;
   height: 50px;
@@ -3838,7 +3934,7 @@ form button {
   color: #FFF;
   cursor: pointer;
 }
-/* line 178, ../scss/app.scss */
+/* line 173, ../scss/app.scss */
 form button:hover {
   opacity: 0.9;
   -webkit-transition: All 0.5s ease;
@@ -3848,7 +3944,7 @@ form button:hover {
   transition: All 0.5s ease;
 }
 
-/* line 190, ../scss/app.scss */
+/* line 185, ../scss/app.scss */
 .meWrap {
   width: 200px;
   margin: 0 auto;
@@ -3856,26 +3952,48 @@ form button:hover {
   background: #27aae1;
 }
 
-/* line 191, ../scss/app.scss */
+/* line 186, ../scss/app.scss */
 .me {
   border-radius: 50%;
   opacity: 0.6;
   border: 4px dashed #FFF;
 }
 
-/* line 192, ../scss/app.scss */
+/* line 187, ../scss/app.scss */
 p.about {
   height: 209px;
   display: table-cell;
   vertical-align: middle;
 }
 
-/* line 197, ../scss/app.scss */
+/* line 192, ../scss/app.scss */
 #page1 .large-12 {
   padding-bottom: 10px;
 }
 
-/* line 200, ../scss/app.scss */
+/* line 195, ../scss/app.scss */
 #page3 h2 {
   padding: 0px;
+}
+
+@media only screen and (max-width: 960px) {
+  /* line 198, ../scss/app.scss */
+  nav {
+    width: 280px;
+    font-size: 28px;
+    height: 50px;
+    padding-left: 0px;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  /* line 206, ../scss/app.scss */
+  .tog {
+    display: none;
+  }
+
+  /* line 209, ../scss/app.scss */
+  .next, .prev {
+    display: none;
+  }
 }
